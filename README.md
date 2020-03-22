@@ -7,7 +7,9 @@ Code for the AI lab course 2019/2020 of the University of Verona
 2.  Install Anaconda
 	- On Linux/Mac 
 		- Use *sh Anacaonda....sh* to install.
-		- Add it to the PATH during installation if you’re ok with it. Then *source ∼/.bashrc*.
+		- Add it to the PATH during installation if you’re ok with it:
+			- First *export PATH=~/anaconda3/bin:$PATH*
+			- Then *source ~/.bashrc*
 		- *sudo apt-get install git* (may be required).
 	- On Windows
 		- Double click the installer to launch.
@@ -15,12 +17,13 @@ Code for the AI lab course 2019/2020 of the University of Verona
 
 3.  Set-Up conda environment:
 	- *git clone https://github.com/d-corsi/AI-Lab*
-	- *cd AI-Lab/Tools*
+	- *cd AI-Lab/tools*
 	- *conda env create -f ai-lab-environment.yml*
 
 ## Using the Notebook
 To start the environment and work on your assignments, navigate to the downloaded folder root *(AI-Lab)* and run:
 ```
+source ~/anaconda3/etc/profile.d/conda.sh (may be required on linux).
 conda activate ai-lab
 jupyter notebook
 ```
