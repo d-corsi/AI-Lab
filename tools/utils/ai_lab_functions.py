@@ -1,4 +1,6 @@
 from collections import deque
+import heapq
+import numpy as np
 
 class Node:
     def __init__(self, state, parent=None, pathcost=0, value=0):
@@ -10,6 +12,9 @@ class Node:
 
     def __hash__(self):
         return self.state
+
+    def __lt__(self, other):
+        return self.value < other.value
 
 
 class NodeQueue():
@@ -44,6 +49,59 @@ class NodeQueue():
 
     def __getitem__(self, i):
         return self.node_dict[i]
+
+
+class PriorityQueue():
+    def __init__(self):
+        self.fringe = []
+        self.frdict = {} 
+        self.frlen = 0
+
+    def is_empty(self):
+        return self.frlen == 0
+
+    def add(self, n):
+        heapq.heappush(self.fringe, n)
+        self.frdict[n.state] = n
+        self.frlen += 1
+
+    def remove(self):
+        while True:
+            n = heapq.heappop(self.fringe)
+            if not n.removed:
+                if n.state in self.frdict:
+                    del self.frdict[n.state]
+                self.frlen -= 1
+                return n
+
+    def replace(self, n):
+        self.frdict[n.state].removed = True
+        self.frdict[n.state] = n
+        self.frlen -= 1
+        self.add(n)
+
+    def __len__(self):
+        return self.frlen
+
+    def __contains__(self, item):
+        return item in self.frdict
+
+    def __getitem__(self, i):
+        return self.frdict[i]
+
+
+class Heu():
+    @staticmethod
+    def l1_norm(p1, p2):
+        return np.sum(np.abs(np.asarray(p1) - np.asarray(p2)))
+
+    @staticmethod
+    def l2_norm(p1, p2):
+        return np.linalg.norm((np.asarray(p1), np.asarray(p2)))
+
+    @staticmethod
+    def chebyshev(p1, p2):
+        return np.max(np.abs(np.asarray(p1) - np.asarray(p2)))
 
 
 def build_path(node):
