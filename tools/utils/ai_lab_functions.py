@@ -120,6 +120,7 @@ def solution_2_string(sol, env):
         solution = [env.state_to_pos(s) for s in sol]
     return solution
 
+
 def zero_to_infinity():
     i = 0
     while True:
