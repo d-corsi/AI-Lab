@@ -3,7 +3,7 @@
 ----------------------------------------------------------------
 Solution: time-out
 N° of nodes explored: 10000
-Max n° of nodes in memory: None
+Max n° of nodes in memory: 30001
 
 ----------------------------------------------------------------
 	GREEDY BEST FIRST GRAPH SEARCH PROBLEM: 

@@ -2,6 +2,7 @@ from collections import deque
 import heapq
 import numpy as np
 
+
 class Node:
     def __init__(self, state, parent=None, pathcost=0, value=0):
         self.state = state
