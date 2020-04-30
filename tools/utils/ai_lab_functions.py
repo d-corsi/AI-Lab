@@ -1,6 +1,7 @@
 from collections import deque
 import heapq
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 class Node:
@@ -127,3 +128,33 @@ def zero_to_infinity():
     while True:
         yield i
         i += 1
+
+def run_episode(environment, policy, limit):
+    obs = environment.reset()
+    done = False
+    reward = 0
+    s = 0
+    while not done and s < limit:
+        obs, r, done, _ = environment.step(policy[obs])
+        reward += r
+        s += 1
+    return reward
+
+def plot(series, title, xlabel, ylabel):
+        plt.figure(figsize=(13, 6))
+        for s in series:
+            plt.plot(s["x"], s["y"], label=s["label"])
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        plt.title(title)
+        plt.legend()
+        plt.show()
+
+def values_to_policy(values, env, gamma=0.9):
+    return (env.T * (env.R + gamma * values)).sum(axis=2).argmax(axis=1)
+
+
+def rolling(a, window):
+    shape = a.shape[:-1] + (a.shape[-1] - window + 1, window)
+    strides = a.strides + (a.strides[-1],)
+    return np.mean(np.lib.stride_tricks.as_strided(a, shape=shape, strides=strides), -1)

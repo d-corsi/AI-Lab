@@ -78,6 +78,8 @@ class ObsGrid(Env):
         self.np_random = None
         self.currstate = None
         self.done = False
+        self.RS = (self.R.min(axis=1).min(axis=0))
+        self.RS[-1] = 1
         self.seed()
         self.reset()
 

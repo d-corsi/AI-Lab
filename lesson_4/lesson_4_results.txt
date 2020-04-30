@@ -1,0 +1,36 @@
+----------------------------------------------------------------
+	Environment: Cliff-v0 
+	Q-Learning
+----------------------------------------------------------------
+
+        o  o  o  o  o  o  o  o  o  o  o  o
+        o  o  o  o  o  o  o  o  o  o  o  o
+        o  o  o  o  o  o  o  o  o  o  o  o
+        x  C  C  C  C  C  C  C  C  C  C  T
+
+
+        Execution time: 0.9721s
+        Policy:
+        [['R' 'R' 'L' 'U' 'D' 'R' 'D' 'R' 'R' 'R' 'R' 'D']
+        ['L' 'R' 'R' 'R' 'R' 'R' 'D' 'R' 'D' 'R' 'R' 'D']
+        ['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'D']
+        ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']]
+
+
+----------------------------------------------------------------
+	Environment: Cliff-v0 
+	SARSA
+----------------------------------------------------------------
+
+        o  o  o  o  o  o  o  o  o  o  o  o
+        o  o  o  o  o  o  o  o  o  o  o  o
+        o  o  o  o  o  o  o  o  o  o  o  o
+        x  C  C  C  C  C  C  C  C  C  C  T
+
+
+        Execution time: 0.7956s
+        Policy:
+        [['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'D']
+        ['U' 'U' 'U' 'R' 'U' 'R' 'R' 'U' 'U' 'R' 'R' 'D']
+        ['R' 'U' 'U' 'U' 'U' 'U' 'L' 'L' 'R' 'U' 'R' 'D']
+        ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']]
