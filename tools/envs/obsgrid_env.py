@@ -93,6 +93,9 @@ class ObsGrid(Env):
         self.seed()
         self.reset()
 
+    def is_terminal(self, state):
+        raise NotImplementedError
+
     def seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
         return [seed]
