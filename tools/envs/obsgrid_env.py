@@ -44,12 +44,14 @@ class ObsGrid(Env):
         # Precompute transition function T(s, a, s') and reward function R(s, a, s')
         self.T = np.zeros((self.observation_space.n, self.action_space.n, self.observation_space.n))
         self.R = np.zeros((self.observation_space.n, self.action_space.n, self.observation_space.n))
+        self.RS = np.zeros((self.observation_space.n))
         for s in range(self.observation_space.n):
             # If this is an end state, we just keep staying here without receiving any more rewards
             if self.grid[s] == "W":
                 continue
             if self.grid[s] == "G" or self.grid[s] == "P":
                 self.T[s, :, s] = 1.0
+                #self.RS[s] = 1
                 continue
             x, y = self.state_to_pos(s)
             for a in range(self.action_space.n):
@@ -68,18 +70,26 @@ class ObsGrid(Env):
                     if self.grid[stp] == "W":  # We are not ghosts
                         self.T[s, a, s] += actdyn[a][d]
                         self.R[s, a, s] = rewards[self.grid[s]]
+                        self.RS[s] = rewards[self.grid[s]]
                     else:
                         ns = self.pos_to_state(nx, ny)
                         self.T[s, a, ns] += actdyn[a][d]
                         self.R[s, a, ns] = rewards[self.grid[ns]]
+                        self.RS[s] = rewards[self.grid[s]]
                 # Normalize probability values over the whole state space
                 self.T[s, a, :] /= np.sum(self.T[s, a, :])
+
+        
+        for s in range(self.observation_space.n):
+            if self.grid[s] == "P": self.RS[s] = rewards["P"]
+            if self.grid[s] == "G": self.RS[s] = rewards["G"]
+        
         self.reward_range = self.R.min(), self.R.max()
         self.np_random = None
         self.currstate = None
         self.done = False
-        self.RS = (self.R.min(axis=1).min(axis=0))
-        self.RS[-1] = 1
+        #self.RS = (self.R.min(axis=1).min(axis=0))
+        #self.RS[-1] = 1
         self.seed()
         self.reset()
 
