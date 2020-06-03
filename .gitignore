@@ -9,9 +9,6 @@ developer_notes.txt
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Next Lesson
-lesson_5/
-
 # Jupyter Solutions
 lesson_1/lesson_1_solution.ipynb
 lesson_2/lesson_2_solution_russel.ipynb
