@@ -153,15 +153,30 @@ def plot(series, title, xlabel, ylabel):
 def values_to_policy_old(values, env, gamma=0.9):
     return (env.T * (env.R + gamma * values)).sum(axis=2).argmax(axis=1)
 
-def values_to_policy(U, env):
-    p = [0 for _ in range(env.observation_space.n)]
+def values_to_policy_b(U, env):
+    p = [-10000 for _ in range(env.observation_space.n)]
     
     for state in range(env.observation_space.n):
         max_array = [0 for _ in range(env.action_space.n)]
         for action in range(env.action_space.n):
             for next_state in range(env.observation_space.n):
                 max_array[action] += env.T[state, action, next_state] * U[next_state]
-            p[state] = np.asarray(max_array).argmax()
+        p[state] = np.asarray(max_array).argmax()
+    
+    return np.asarray(p)
+
+    
+def values_to_policy(U, env):
+    p = [0 for _ in range(env.observation_space.n)]
+    
+    for state in range(env.observation_space.n):
+        max_array = [-100000 for _ in range(env.action_space.n)]
+        for action in range(env.action_space.n):
+            for next_state in range(env.observation_space.n):
+                max_array[action] += env.T[state, action, next_state] * U[next_state]
+
+        a = max(max_array)
+        p[state] = max_array.index(a)
     
     return np.asarray(p)
 
