@@ -1,5 +1,5 @@
 # AI-Lab
-Code for the AI lab course 2019/2020 of the University of Verona
+Code for the AI lab course 2020/2021 of the University of Verona
 
 ## Set-Up the environment for the curse
 1. Download [Anaconda](https://www.anaconda.com/distribution/#download-section) for your System.
