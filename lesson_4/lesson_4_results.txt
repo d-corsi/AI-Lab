@@ -3,18 +3,18 @@
 	Q-Learning
 ----------------------------------------------------------------
 
-        o  o  o  o  o  o  o  o  o  o  o  o
-        o  o  o  o  o  o  o  o  o  o  o  o
-        o  o  o  o  o  o  o  o  o  o  o  o
-        x  C  C  C  C  C  C  C  C  C  C  T
+    o  o  o  o  o  o  o  o  o  o  o  o
+    o  o  o  o  o  o  o  o  o  o  o  o
+    o  o  o  o  o  o  o  o  o  o  o  o
+    x  C  C  C  C  C  C  C  C  C  C  T
 
 
-        Execution time: 0.9721s
-        Policy:
-        [['R' 'R' 'L' 'U' 'D' 'R' 'D' 'R' 'R' 'R' 'R' 'D']
-        ['L' 'R' 'R' 'R' 'R' 'R' 'D' 'R' 'D' 'R' 'R' 'D']
-        ['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'D']
-        ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']]
+    Execution time: 0.516s
+    Policy:
+    [['L' 'R' 'R' 'U' 'D' 'U' 'D' 'R' 'R' 'R' 'D' 'D']
+     ['D' 'R' 'U' 'U' 'R' 'D' 'R' 'R' 'R' 'D' 'D' 'D']
+     ['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'D']
+     ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']]
 
 
 ----------------------------------------------------------------
@@ -22,15 +22,15 @@
 	SARSA
 ----------------------------------------------------------------
 
-        o  o  o  o  o  o  o  o  o  o  o  o
-        o  o  o  o  o  o  o  o  o  o  o  o
-        o  o  o  o  o  o  o  o  o  o  o  o
-        x  C  C  C  C  C  C  C  C  C  C  T
+    o  o  o  o  o  o  o  o  o  o  o  o
+    o  o  o  o  o  o  o  o  o  o  o  o
+    o  o  o  o  o  o  o  o  o  o  o  o
+    x  C  C  C  C  C  C  C  C  C  C  T
 
 
-        Execution time: 0.7956s
-        Policy:
-        [['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'D']
-        ['U' 'U' 'U' 'R' 'U' 'R' 'R' 'U' 'U' 'R' 'R' 'D']
-        ['R' 'U' 'U' 'U' 'U' 'U' 'L' 'L' 'R' 'U' 'R' 'D']
-        ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']]
+    Execution time: 1.0396s
+    Policy:
+    [['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'D' 'D']
+     ['U' 'U' 'U' 'L' 'R' 'U' 'U' 'U' 'U' 'R' 'R' 'D']
+     ['U' 'U' 'U' 'L' 'L' 'L' 'R' 'L' 'R' 'U' 'U' 'D']
+     ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']]
