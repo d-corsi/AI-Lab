@@ -1,3 +1,4 @@
+
 ----------------------------------------------------------------
 	Environment: Cliff-v0 
 	Q-Learning
@@ -9,10 +10,10 @@
     x  C  C  C  C  C  C  C  C  C  C  T
 
 
-    Execution time: 0.516s
+    Execution time: 0.221s
     Policy:
-    [['L' 'R' 'R' 'U' 'D' 'U' 'D' 'R' 'R' 'R' 'D' 'D']
-     ['D' 'R' 'U' 'U' 'R' 'D' 'R' 'R' 'R' 'D' 'D' 'D']
+    [['R' 'U' 'R' 'D' 'R' 'R' 'R' 'R' 'R' 'D' 'D' 'D']
+     ['U' 'R' 'D' 'R' 'R' 'R' 'R' 'D' 'R' 'D' 'D' 'D']
      ['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'D']
      ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']]
 
@@ -28,9 +29,9 @@
     x  C  C  C  C  C  C  C  C  C  C  T
 
 
-    Execution time: 1.0396s
+    Execution time: 0.1422s
     Policy:
     [['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'D' 'D']
-     ['U' 'U' 'U' 'L' 'R' 'U' 'U' 'U' 'U' 'R' 'R' 'D']
-     ['U' 'U' 'U' 'L' 'L' 'L' 'R' 'L' 'R' 'U' 'U' 'D']
+     ['U' 'U' 'U' 'U' 'R' 'U' 'U' 'R' 'R' 'U' 'R' 'D']
+     ['U' 'U' 'U' 'U' 'U' 'L' 'U' 'R' 'R' 'U' 'R' 'D']
      ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']]
