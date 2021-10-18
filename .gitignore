@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Developer Notes
+developer_notes.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Jupyter Solutions
+lesson_1/lesson_1_solution.ipynb
+lesson_2/lesson_2_solution.ipynb
+lesson_3/lesson_3_solution.ipynb
+lesson_4/lesson_4_solution.ipynb
+lesson_5/lesson_5_solution.ipynb
+lesson_5/lesson_6_solution.ipynb
+
+# VS Code
+.vscode/
