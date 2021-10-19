@@ -6,7 +6,7 @@ Code for the AI lab course 2021/2022 of the University of Verona
 
 2.  Install Anaconda
 	- On Linux/Mac 
-		- Use *sh Anacaonda....sh* to install.
+		- Use *sh Anacaonda{version}.sh* to install.
 		- Add it to the PATH during installation if you’re ok with it:
 			- First *export PATH=~/anaconda3/bin:$PATH*
 			- Then *source ~/.bashrc*
