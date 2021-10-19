@@ -150,6 +150,7 @@ def plot(series, title, xlabel, ylabel):
         plt.legend()
         plt.show()
 
+        
 def values_to_policy(U, env):
     p = [0 for _ in range(env.observation_space.n)]
     
@@ -158,10 +159,12 @@ def values_to_policy(U, env):
         for action in range(env.action_space.n):
             for next_state in range(env.observation_space.n):
                 max_array[action] += env.T[state, action, next_state] * U[next_state]
-
-        a = max(max_array)
-        p[state] = max_array.index(a)
-    
+                
+        max_array = np.round(max_array, 6)
+        winners = np.argwhere(max_array == np.amax(max_array)).flatten()
+        win_action = winners[0]#np.random.choice(winners)
+        p[state] = win_action
+                
     return np.asarray(p)
 
 
