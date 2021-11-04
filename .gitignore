@@ -3,9 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Developer Notes
-developer_notes.txt
-
 # Jupyter Notebook
 .ipynb_checkpoints
 

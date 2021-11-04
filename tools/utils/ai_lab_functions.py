@@ -99,7 +99,7 @@ class Heu():
 
     @staticmethod
     def l2_norm(p1, p2):
-        return np.linalg.norm((np.asarray(p1), np.asarray(p2)))
+        return np.linalg.norm((np.asarray(p1) - np.asarray(p2)))
 
     @staticmethod
     def chebyshev(p1, p2):
