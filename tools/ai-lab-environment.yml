@@ -10,3 +10,6 @@ dependencies:
   - tqdm
   - tensorflow
   - keras
+  - scipy
+  - matplotlib
+  - networkx
