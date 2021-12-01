@@ -1,0 +1,14 @@
+Bucket Elimination for the: Problem Graph Coloring:
+	Variable Assignment: {'X5': 'R', 'X4': 'R', 'X3': 'B', 'X2': 'Y', 'X1': 'B'}
+	Global Maximum Found: 0
+	Maximum Table Size (with the order ['X5', 'X4', 'X3', 'X2', 'X1']): 120
+
+Bucket Elimination for the: Partial Test 15/05/2013:
+	Variable Assignment: {'X4': 'R', 'X3': 'B', 'X2': 'R', 'X1': 'B'}
+	Global Maximum Found: -1
+	Maximum Table Size (with the order ['X4', 'X3', 'X2', 'X1']): 48
+
+Bucket Elimination for the: Partial Test 04/05/2016:
+	Variable Assignment: {'X1': 'R', 'X2': 'R', 'X3': 'B', 'X4': 'R'}
+	Global Maximum Found: 4
+	Maximum Table Size (with the order ['X1', 'X2', 'X3', 'X4']): 24

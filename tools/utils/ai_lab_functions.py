@@ -13,7 +13,7 @@ class Node:
         self.removed = False
 
     def __hash__(self):
-        return self.state
+        return int(self.state)
 
     def __lt__(self, other):
         return self.value < other.value
