@@ -10,10 +10,10 @@
     x  C  C  C  C  C  C  C  C  C  C  T
 
 
-    Execution time: 0.221s
+    Execution time: 0.2896s
     Policy:
-    [['R' 'U' 'R' 'D' 'R' 'R' 'R' 'R' 'R' 'D' 'D' 'D']
-     ['U' 'R' 'D' 'R' 'R' 'R' 'R' 'D' 'R' 'D' 'D' 'D']
+    [['D' 'U' 'D' 'L' 'R' 'R' 'R' 'R' 'R' 'U' 'D' 'D']
+     ['D' 'U' 'D' 'R' 'D' 'R' 'R' 'R' 'R' 'R' 'R' 'D']
      ['R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'R' 'D']
      ['U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U' 'U']]
 
